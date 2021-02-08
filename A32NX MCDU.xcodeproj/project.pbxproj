@@ -13,6 +13,10 @@
 		2F8A4B6125D0A8A600310BAD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F8A4B5F25D0A8A600310BAD /* Main.storyboard */; };
 		2F8A4B6325D0A8A700310BAD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2F8A4B6225D0A8A700310BAD /* Assets.xcassets */; };
 		2F8A4B6625D0A8A700310BAD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F8A4B6425D0A8A700310BAD /* LaunchScreen.storyboard */; };
+		2FC2644F25D0E4B7003AB74B /* screen in Resources */ = {isa = PBXBuildFile; fileRef = 2FC2644E25D0E4B7003AB74B /* screen */; };
+		2FC2645125D0EB95003AB74B /* MCDUButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC2645025D0EB95003AB74B /* MCDUButton.swift */; };
+		2FC2645325D0FA7A003AB74B /* MCDUButtonGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC2645225D0FA7A003AB74B /* MCDUButtonGroup.swift */; };
+		2FC2645525D1163E003AB74B /* MCDUButtonGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC2645425D1163E003AB74B /* MCDUButtonGrid.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,10 @@
 		2F8A4B6225D0A8A700310BAD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2F8A4B6525D0A8A700310BAD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2F8A4B6725D0A8A700310BAD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2FC2644E25D0E4B7003AB74B /* screen */ = {isa = PBXFileReference; lastKnownFileType = folder; path = screen; sourceTree = "<group>"; };
+		2FC2645025D0EB95003AB74B /* MCDUButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCDUButton.swift; sourceTree = "<group>"; };
+		2FC2645225D0FA7A003AB74B /* MCDUButtonGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCDUButtonGroup.swift; sourceTree = "<group>"; };
+		2FC2645425D1163E003AB74B /* MCDUButtonGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCDUButtonGrid.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,10 +64,14 @@
 		2F8A4B5825D0A8A600310BAD /* A32NX MCDU */ = {
 			isa = PBXGroup;
 			children = (
+				2FC2644E25D0E4B7003AB74B /* screen */,
 				2F8A4B5925D0A8A600310BAD /* AppDelegate.swift */,
 				2F8A4B5B25D0A8A600310BAD /* SceneDelegate.swift */,
 				2F8A4B5D25D0A8A600310BAD /* ViewController.swift */,
 				2F8A4B5F25D0A8A600310BAD /* Main.storyboard */,
+				2FC2645425D1163E003AB74B /* MCDUButtonGrid.swift */,
+				2FC2645225D0FA7A003AB74B /* MCDUButtonGroup.swift */,
+				2FC2645025D0EB95003AB74B /* MCDUButton.swift */,
 				2F8A4B6225D0A8A700310BAD /* Assets.xcassets */,
 				2F8A4B6425D0A8A700310BAD /* LaunchScreen.storyboard */,
 				2F8A4B6725D0A8A700310BAD /* Info.plist */,
@@ -126,6 +138,7 @@
 			files = (
 				2F8A4B6625D0A8A700310BAD /* LaunchScreen.storyboard in Resources */,
 				2F8A4B6325D0A8A700310BAD /* Assets.xcassets in Resources */,
+				2FC2644F25D0E4B7003AB74B /* screen in Resources */,
 				2F8A4B6125D0A8A600310BAD /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -139,7 +152,10 @@
 			files = (
 				2F8A4B5E25D0A8A600310BAD /* ViewController.swift in Sources */,
 				2F8A4B5A25D0A8A600310BAD /* AppDelegate.swift in Sources */,
+				2FC2645325D0FA7A003AB74B /* MCDUButtonGroup.swift in Sources */,
 				2F8A4B5C25D0A8A600310BAD /* SceneDelegate.swift in Sources */,
+				2FC2645525D1163E003AB74B /* MCDUButtonGrid.swift in Sources */,
+				2FC2645125D0EB95003AB74B /* MCDUButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -289,6 +305,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = J8D46U62W6;
 				INFOPLIST_FILE = "A32NX MCDU/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -308,6 +325,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = J8D46U62W6;
 				INFOPLIST_FILE = "A32NX MCDU/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

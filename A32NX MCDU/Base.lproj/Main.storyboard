@@ -1,24 +1,218 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18121" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18091"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="A32NX_MCDU" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uaF-cu-ccD">
+                                <rect key="frame" x="0.0" y="42" width="375" height="583"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MCDU" translatesAutoresizingMaskIntoConstraints="NO" id="ehV-Cm-n2F">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="583"/>
+                                    </imageView>
+                                    <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e4y-eb-a2y">
+                                        <rect key="frame" x="64.5" y="54.5" width="250" height="215.5"/>
+                                        <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <wkWebViewConfiguration key="configuration">
+                                            <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                            <wkPreferences key="preferences"/>
+                                        </wkWebViewConfiguration>
+                                    </wkWebView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="WY8-15-JOM">
+                                        <rect key="frame" x="47.5" y="290" width="255.5" height="23.5"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KLB-dB-OSw" customClass="MCDUButton" customModule="A32NX_MCDU" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="42.5" height="23.5"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="eventName" value="DIR"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O02-p5-JbB" customClass="MCDUButton" customModule="A32NX_MCDU" customModuleProvider="target">
+                                                <rect key="frame" x="42.5" y="0.0" width="43" height="23.5"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="eventName" value="PROG"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G6e-iA-GO7" customClass="MCDUButton" customModule="A32NX_MCDU" customModuleProvider="target">
+                                                <rect key="frame" x="85.5" y="0.0" width="42.5" height="23.5"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="eventName" value="PERF"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gEl-M7-7V5" customClass="MCDUButton" customModule="A32NX_MCDU" customModuleProvider="target">
+                                                <rect key="frame" x="128" y="0.0" width="42.5" height="23.5"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="eventName" value="INIT"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tzq-Ul-B7f" customClass="MCDUButton" customModule="A32NX_MCDU" customModuleProvider="target">
+                                                <rect key="frame" x="170.5" y="0.0" width="42.5" height="23.5"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="eventName" value="DATA"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rek-BG-Wmz">
+                                                <rect key="frame" x="213" y="0.0" width="42.5" height="23.5"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="eventName" value="PERF"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Vke-bq-CMA">
+                                        <rect key="frame" x="47.5" y="315.5" width="255.5" height="34"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qX4-bI-mye" customClass="MCDUButton" customModule="A32NX_MCDU" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="42.5" height="34"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="eventName" value="FPLN"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wdm-U2-jMH" customClass="MCDUButton" customModule="A32NX_MCDU" customModuleProvider="target">
+                                                <rect key="frame" x="42.5" y="0.0" width="43" height="34"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="eventName" value="RAD"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M3h-H0-309" customClass="MCDUButton" customModule="A32NX_MCDU" customModuleProvider="target">
+                                                <rect key="frame" x="85.5" y="0.0" width="42.5" height="34"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="eventName" value="FUEL"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="85m-eZ-JlG" customClass="MCDUButton" customModule="A32NX_MCDU" customModuleProvider="target">
+                                                <rect key="frame" x="128" y="0.0" width="42.5" height="34"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="eventName" value="SEC"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uz5-SU-wSA" customClass="MCDUButton" customModule="A32NX_MCDU" customModuleProvider="target">
+                                                <rect key="frame" x="170.5" y="0.0" width="42.5" height="34"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="eventName" value="ATC"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fPA-nP-bMs" customClass="MCDUButton" customModule="A32NX_MCDU" customModuleProvider="target">
+                                                <rect key="frame" x="213" y="0.0" width="42.5" height="34"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="eventName" value="MENU"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="omB-uv-y7H" customClass="MCDUButton" customModule="A32NX_MCDU" customModuleProvider="target">
+                                        <rect key="frame" x="45.5" y="350.5" width="40" height="22"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="eventName" value="AIRPORT"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="4CQ-p4-thg" customClass="MCDUButtonGrid" customModule="A32NX_MCDU" customModuleProvider="target">
+                                        <rect key="frame" x="162" y="364" width="171" height="207.5"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="events" value="A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z,DIV,SP,OVFY,CLR"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cols">
+                                                <integer key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="5OC-1k-6YJ" customClass="MCDUButtonGrid" customModule="A32NX_MCDU" customModuleProvider="target">
+                                        <rect key="frame" x="52.5" y="449" width="97.5" height="122.5"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="events" value="1,2,3,4,5,6,7,8,9,DOT,0,PLUSMINUS"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cols">
+                                                <integer key="value" value="3"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="1GW-S1-Hhk" customClass="MCDUButtonGrid" customModule="A32NX_MCDU" customModuleProvider="target">
+                                        <rect key="frame" x="47" y="380" width="83" height="53"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="events" value="PREVPAGE,UP,NEXTPAGE,DOWN"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cols">
+                                                <integer key="value" value="2"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Byh-wa-0SS" customClass="MCDUButtonGrid" customModule="A32NX_MCDU" customModuleProvider="target">
+                                        <rect key="frame" x="5" y="83" width="362" height="167"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="events" value="L1,R1,L2,R2,L3,R3,L4,R4,L5,R5,L6,R6"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cols">
+                                                <integer key="value" value="2"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="e4y-eb-a2y" firstAttribute="centerY" secondItem="uaF-cu-ccD" secondAttribute="centerY" multiplier="0.557" id="4nA-OQ-75p"/>
+                                    <constraint firstAttribute="height" secondItem="e4y-eb-a2y" secondAttribute="height" multiplier="2.70588" id="5DM-cO-1NO"/>
+                                    <constraint firstItem="ehV-Cm-n2F" firstAttribute="leading" secondItem="uaF-cu-ccD" secondAttribute="leading" id="6DP-dl-WI7"/>
+                                    <constraint firstItem="WY8-15-JOM" firstAttribute="centerY" secondItem="uaF-cu-ccD" secondAttribute="centerY" multiplier="1.035" id="91K-Z6-YL8"/>
+                                    <constraint firstItem="Vke-bq-CMA" firstAttribute="centerX" secondItem="uaF-cu-ccD" secondAttribute="centerX" multiplier="0.935" id="AWB-s0-6oS"/>
+                                    <constraint firstAttribute="width" secondItem="5OC-1k-6YJ" secondAttribute="width" multiplier="3.83333" id="Eh8-Sv-Gub"/>
+                                    <constraint firstAttribute="bottom" secondItem="ehV-Cm-n2F" secondAttribute="bottom" id="FjE-k3-0GD"/>
+                                    <constraint firstItem="Vke-bq-CMA" firstAttribute="centerY" secondItem="uaF-cu-ccD" secondAttribute="centerY" multiplier="1.14" id="ITK-Fr-jJt"/>
+                                    <constraint firstItem="5OC-1k-6YJ" firstAttribute="centerY" secondItem="uaF-cu-ccD" secondAttribute="centerY" multiplier="1.75" id="NWa-kD-gRd"/>
+                                    <constraint firstAttribute="height" secondItem="Vke-bq-CMA" secondAttribute="height" priority="25" id="OaJ-Lo-dcH"/>
+                                    <constraint firstItem="5OC-1k-6YJ" firstAttribute="centerX" secondItem="uaF-cu-ccD" secondAttribute="centerX" multiplier="0.54" id="Pml-s0-FQf"/>
+                                    <constraint firstItem="WY8-15-JOM" firstAttribute="centerX" secondItem="uaF-cu-ccD" secondAttribute="centerX" multiplier="0.935" id="QN7-P1-98P"/>
+                                    <constraint firstAttribute="height" secondItem="5OC-1k-6YJ" secondAttribute="height" multiplier="4.77037" id="SKK-JY-ZrD"/>
+                                    <constraint firstItem="e4y-eb-a2y" firstAttribute="centerX" secondItem="uaF-cu-ccD" secondAttribute="centerX" multiplier="1.01" id="T4n-KO-gwB"/>
+                                    <constraint firstAttribute="height" secondItem="4CQ-p4-thg" secondAttribute="height" multiplier="2.81223" id="TU6-2c-eW9"/>
+                                    <constraint firstItem="omB-uv-y7H" firstAttribute="centerX" secondItem="uaF-cu-ccD" secondAttribute="centerX" multiplier="0.35" id="VvH-nP-VtW"/>
+                                    <constraint firstAttribute="height" secondItem="omB-uv-y7H" secondAttribute="height" multiplier="26.8333" id="ZZY-Ub-T5t"/>
+                                    <constraint firstItem="4CQ-p4-thg" firstAttribute="centerY" secondItem="uaF-cu-ccD" secondAttribute="centerY" multiplier="1.605" id="crE-4f-MR8"/>
+                                    <constraint firstAttribute="width" secondItem="WY8-15-JOM" secondAttribute="width" multiplier="1.469" id="fQp-zC-UAx"/>
+                                    <constraint firstItem="omB-uv-y7H" firstAttribute="centerY" secondItem="uaF-cu-ccD" secondAttribute="centerY" multiplier="1.24" id="fzt-ls-rp7"/>
+                                    <constraint firstAttribute="trailing" secondItem="ehV-Cm-n2F" secondAttribute="trailing" id="gWJ-2o-5WN"/>
+                                    <constraint firstItem="4CQ-p4-thg" firstAttribute="centerX" secondItem="uaF-cu-ccD" secondAttribute="centerX" multiplier="1.32" id="gw1-sb-spd"/>
+                                    <constraint firstAttribute="width" secondItem="uaF-cu-ccD" secondAttribute="height" multiplier="1061:1650" id="iNb-gh-pzq"/>
+                                    <constraint firstItem="ehV-Cm-n2F" firstAttribute="top" secondItem="uaF-cu-ccD" secondAttribute="top" id="ikD-Su-bgn"/>
+                                    <constraint firstAttribute="width" secondItem="Vke-bq-CMA" secondAttribute="width" multiplier="1.469" id="l9W-Yi-veQ"/>
+                                    <constraint firstAttribute="height" secondItem="WY8-15-JOM" secondAttribute="height" multiplier="25" id="mMR-iq-vbN"/>
+                                    <constraint firstAttribute="width" secondItem="4CQ-p4-thg" secondAttribute="width" multiplier="2.19048" id="p7j-Nq-QGh"/>
+                                    <constraint firstAttribute="width" secondItem="e4y-eb-a2y" secondAttribute="width" multiplier="1.5" id="rRE-T5-K1V"/>
+                                    <constraint firstAttribute="width" secondItem="omB-uv-y7H" secondAttribute="width" multiplier="9.40909" id="x89-wd-NoW"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="uaF-cu-ccD" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="2Uz-hz-3M0"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="uaF-cu-ccD" secondAttribute="trailing" id="Pc4-UI-Pxt"/>
+                            <constraint firstItem="uaF-cu-ccD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="rBQ-MC-UDO"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="webView" destination="e4y-eb-a2y" id="kRD-qF-Jbc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="130.40000000000001" y="79.610194902548727"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="MCDU" width="1061" height="1650"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
