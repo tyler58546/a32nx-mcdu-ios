@@ -40,4 +40,7 @@ class ConnectionViewController: UIViewController {
         mainVC!.connect(ip: ipField.text ?? "", port: portField.text ?? "8080")
     }
     
+    @IBAction func dismissField(_ sender: Any) {
+        (sender as! UITextField).resignFirstResponder()
+    }
 }
