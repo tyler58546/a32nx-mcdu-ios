@@ -275,6 +275,7 @@ document.connect = function(ip, port) {
 
     socket.onopen = () => {
         webkit.messageHandlers.callback.postMessage("connected");
+        socket.send("event:MENU");
     };
     socket.onclose = () => {
         webkit.messageHandlers.callback.postMessage("disconnected");
