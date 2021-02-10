@@ -1,3 +1,9 @@
+/**
+ * @typedef webkit
+ * @typedef webkit.messageHandlers
+ * @typedef webkit.messageHandlers.callback
+ */
+
 class MCDU {
 
     constructor() {
@@ -224,14 +230,22 @@ class MCDU {
 
 document.mcdu = new MCDU();
 
-document.addEventListener('DOMContentLoaded', () => {
+webkit.messageHandlers.callback.postMessage("disconnected");
+
+document.connect = function(ip, port) {
     const mcdu = document.mcdu;
-    mcdu.generateHTMLLayout(document.getElementById("screen"));
-    
-    document.socket = new WebSocket('ws://192.168.7.228:8080');
+    if (document.socket) {
+        document.socket.close();
+    }
+    try {
+        document.socket = new WebSocket(`ws://${ip}:${port}`);
+    } catch {
+        webkit.messageHandlers.callback.postMessage("failed");
+        return;
+    }
+
     const socket = document.socket;
     socket.addEventListener('message', function (event) {
-        console.log('Message from server ', event.data);
         const message = event.data;
         if (message.startsWith("setLabel:")) {
             const args = JSON.parse(message.substring(9));
@@ -252,6 +266,22 @@ document.addEventListener('DOMContentLoaded', () => {
             mcdu.setInOut(args[0]);
         }
     });
-    
-    mcdu.setTitle("Test");
+
+    setTimeout(() => {
+        if (!document.socket || socket.readyState !== WebSocket.OPEN) {
+            webkit.messageHandlers.callback.postMessage("failed");
+        }
+    }, 2000);
+
+    socket.onopen = () => {
+        webkit.messageHandlers.callback.postMessage("connected");
+    };
+    socket.onclose = () => {
+        webkit.messageHandlers.callback.postMessage("disconnected");
+    };
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    const mcdu = document.mcdu;
+    mcdu.generateHTMLLayout(document.getElementById("screen"));
 }, false);
