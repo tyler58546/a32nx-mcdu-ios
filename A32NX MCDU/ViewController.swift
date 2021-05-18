@@ -17,7 +17,6 @@ class ViewController: UIViewController, WKNavigationDelegate, WKScriptMessageHan
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        //webView.navigationDelegate = self
         webView.configuration.userContentController.add(self, name: "callback")
         webView.scrollView.isScrollEnabled = false
         webView.scrollView.delegate = self
@@ -25,15 +24,6 @@ class ViewController: UIViewController, WKNavigationDelegate, WKScriptMessageHan
         webView.loadFileURL(url, allowingReadAccessTo: url)
         webView.load(URLRequest(url: url))
     }
-
-    /*func webView(_ webView: WKWebView, createWebViewWith configuration: WKWebViewConfiguration, for navigationAction: WKNavigationAction, windowFeatures: WKWindowFeatures) -> WKWebView? {
-        let configuration = WKWebViewConfiguration()
-        let contentController = WKUserContentController()
-        contentController.add(self, name: "callback")
-        configuration.userContentController = contentController
-        print("web")
-        return WKWebView(frame: webView.frame, configuration: configuration)
-    }*/
     
     func sendEvent(eventName: String) {
         webView.evaluateJavaScript("document.socket.send('event:\(eventName)');")

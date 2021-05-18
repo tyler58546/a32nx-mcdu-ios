@@ -30,14 +30,6 @@
     --mcduMagenta: #ff94ff;
 }
 
-div {
-    font-family: "ECAMFontRegular", monospace !important;
-}
-
-text {
-    font-family: "ECAMFontRegular" !important;
-}
-
 .Separator {
     stroke: var(--displaySeparator);
     stroke-width: 4;

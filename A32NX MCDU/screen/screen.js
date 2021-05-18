@@ -285,4 +285,7 @@ document.connect = function(ip, port) {
 document.addEventListener('DOMContentLoaded', () => {
     const mcdu = document.mcdu;
     mcdu.generateHTMLLayout(document.getElementById("screen"));
+    setInterval(() => {
+        document.body.style.width = window.innerWidth + "px";
+    }, 200)
 }, false);
