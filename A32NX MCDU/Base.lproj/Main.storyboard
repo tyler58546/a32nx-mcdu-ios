@@ -136,9 +136,8 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="1GW-S1-Hhk" customClass="MCDUButtonGrid" customModule="A32NX_MCDU" customModuleProvider="target">
-                                        <rect key="frame" x="47" y="380" width="83" height="53"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="1GW-S1-Hhk" customClass="MCDUButtonGrid" customModule="A32NX_MCDU" customModuleProvider="target">
+                                        <rect key="frame" x="81.5" y="670.5" width="146" height="93"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="string" keyPath="events" value="PREVPAGE,UP,NEXTPAGE,DOWN"/>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cols">
@@ -146,9 +145,8 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Byh-wa-0SS" customClass="MCDUButtonGrid" customModule="A32NX_MCDU" customModuleProvider="target">
-                                        <rect key="frame" x="5" y="83" width="362" height="167"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Byh-wa-0SS" customClass="MCDUButtonGrid" customModule="A32NX_MCDU" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="138" width="658" height="307.5"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="string" keyPath="events" value="L1,R1,L2,R2,L3,R3,L4,R4,L5,R5,L6,R6"/>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cols">
@@ -159,6 +157,7 @@
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
+                                    <constraint firstItem="Byh-wa-0SS" firstAttribute="height" secondItem="uaF-cu-ccD" secondAttribute="height" multiplier="0.3" id="2aR-pf-uZ2"/>
                                     <constraint firstItem="e4y-eb-a2y" firstAttribute="centerY" secondItem="uaF-cu-ccD" secondAttribute="centerY" multiplier="0.557" id="4nA-OQ-75p"/>
                                     <constraint firstAttribute="height" secondItem="e4y-eb-a2y" secondAttribute="height" multiplier="2.70588" id="5DM-cO-1NO"/>
                                     <constraint firstItem="ehV-Cm-n2F" firstAttribute="leading" secondItem="uaF-cu-ccD" secondAttribute="leading" id="6DP-dl-WI7"/>
@@ -166,9 +165,12 @@
                                     <constraint firstItem="Vke-bq-CMA" firstAttribute="centerX" secondItem="uaF-cu-ccD" secondAttribute="centerX" multiplier="0.935" id="AWB-s0-6oS"/>
                                     <constraint firstAttribute="width" secondItem="5OC-1k-6YJ" secondAttribute="width" multiplier="3.83333" id="Eh8-Sv-Gub"/>
                                     <constraint firstAttribute="bottom" secondItem="ehV-Cm-n2F" secondAttribute="bottom" id="FjE-k3-0GD"/>
+                                    <constraint firstItem="Byh-wa-0SS" firstAttribute="leading" secondItem="uaF-cu-ccD" secondAttribute="leading" id="FrP-bE-X4q"/>
                                     <constraint firstItem="Vke-bq-CMA" firstAttribute="centerY" secondItem="uaF-cu-ccD" secondAttribute="centerY" multiplier="1.14" id="ITK-Fr-jJt"/>
+                                    <constraint firstItem="1GW-S1-Hhk" firstAttribute="centerY" secondItem="uaF-cu-ccD" secondAttribute="centerY" multiplier="1.4" id="JaD-eK-Whn"/>
                                     <constraint firstItem="5OC-1k-6YJ" firstAttribute="centerY" secondItem="uaF-cu-ccD" secondAttribute="centerY" multiplier="1.75" id="NWa-kD-gRd"/>
                                     <constraint firstAttribute="height" secondItem="Vke-bq-CMA" secondAttribute="height" priority="25" id="OaJ-Lo-dcH"/>
+                                    <constraint firstItem="1GW-S1-Hhk" firstAttribute="centerX" secondItem="uaF-cu-ccD" secondAttribute="centerX" multiplier="0.47" id="PmM-qN-Q7D"/>
                                     <constraint firstItem="5OC-1k-6YJ" firstAttribute="centerX" secondItem="uaF-cu-ccD" secondAttribute="centerX" multiplier="0.54" id="Pml-s0-FQf"/>
                                     <constraint firstItem="WY8-15-JOM" firstAttribute="centerX" secondItem="uaF-cu-ccD" secondAttribute="centerX" multiplier="0.935" id="QN7-P1-98P"/>
                                     <constraint firstAttribute="height" secondItem="5OC-1k-6YJ" secondAttribute="height" multiplier="4.77037" id="SKK-JY-ZrD"/>
@@ -176,9 +178,11 @@
                                     <constraint firstAttribute="height" secondItem="4CQ-p4-thg" secondAttribute="height" multiplier="2.81223" id="TU6-2c-eW9"/>
                                     <constraint firstItem="omB-uv-y7H" firstAttribute="centerX" secondItem="uaF-cu-ccD" secondAttribute="centerX" multiplier="0.35" id="VvH-nP-VtW"/>
                                     <constraint firstAttribute="height" secondItem="omB-uv-y7H" secondAttribute="height" multiplier="26.8333" id="ZZY-Ub-T5t"/>
+                                    <constraint firstItem="Byh-wa-0SS" firstAttribute="centerY" secondItem="uaF-cu-ccD" secondAttribute="centerY" multiplier="0.57" id="bgf-rf-DMw"/>
                                     <constraint firstItem="4CQ-p4-thg" firstAttribute="centerY" secondItem="uaF-cu-ccD" secondAttribute="centerY" multiplier="1.605" id="crE-4f-MR8"/>
                                     <constraint firstAttribute="width" secondItem="WY8-15-JOM" secondAttribute="width" multiplier="1.469" id="fQp-zC-UAx"/>
                                     <constraint firstItem="omB-uv-y7H" firstAttribute="centerY" secondItem="uaF-cu-ccD" secondAttribute="centerY" multiplier="1.24" id="fzt-ls-rp7"/>
+                                    <constraint firstItem="1GW-S1-Hhk" firstAttribute="width" secondItem="uaF-cu-ccD" secondAttribute="width" multiplier="0.221333" id="g70-CU-VTi"/>
                                     <constraint firstAttribute="trailing" secondItem="ehV-Cm-n2F" secondAttribute="trailing" id="gWJ-2o-5WN"/>
                                     <constraint firstItem="4CQ-p4-thg" firstAttribute="centerX" secondItem="uaF-cu-ccD" secondAttribute="centerX" multiplier="1.32" id="gw1-sb-spd"/>
                                     <constraint firstAttribute="width" secondItem="uaF-cu-ccD" secondAttribute="height" multiplier="1061:1650" id="iNb-gh-pzq"/>
@@ -186,7 +190,9 @@
                                     <constraint firstAttribute="width" secondItem="Vke-bq-CMA" secondAttribute="width" multiplier="1.469" id="l9W-Yi-veQ"/>
                                     <constraint firstAttribute="height" secondItem="WY8-15-JOM" secondAttribute="height" multiplier="25" id="mMR-iq-vbN"/>
                                     <constraint firstAttribute="width" secondItem="4CQ-p4-thg" secondAttribute="width" multiplier="2.19048" id="p7j-Nq-QGh"/>
+                                    <constraint firstItem="1GW-S1-Hhk" firstAttribute="height" secondItem="uaF-cu-ccD" secondAttribute="height" multiplier="0.0909091" id="prX-yR-3fy"/>
                                     <constraint firstAttribute="width" secondItem="e4y-eb-a2y" secondAttribute="width" multiplier="1.5" id="rRE-T5-K1V"/>
+                                    <constraint firstAttribute="trailing" secondItem="Byh-wa-0SS" secondAttribute="trailing" id="ses-hT-ZdI"/>
                                     <constraint firstAttribute="width" secondItem="omB-uv-y7H" secondAttribute="width" multiplier="9.40909" id="x89-wd-NoW"/>
                                 </constraints>
                             </view>
