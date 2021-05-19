@@ -1,6 +1,8 @@
 /** This mixin makes a single line element fit exactly on the Roboto font for easier integration. */
 :root {
     --bodyHeightScale: 1;
+    --mcdu-font-size: 5.3vw;
+    --mcdu-line-height: 5.8vw;
     font-family: "HoneywellMCDU" !important;
 }
 
@@ -66,10 +68,10 @@ body {
     width: 100%;
     margin: 0 !important;
     font-family: "HoneywellMCDU" !important;
-    font-size: 5.3vw !important;
+    font-size: var(--mcdu-font-size) !important;
     color: var(--displayWhite);
     background-color: var(--displayBackground);
-    line-height: 5.8vw;
+    line-height: var(--mcdu-line-height);
 }
 
 .white {
@@ -151,14 +153,16 @@ body {
 }
 
 .label {
-    height: 6.55%;
+    height: 6.55vh;
     margin: 0;
     white-space: pre;
+    position: relative;
 }
 
 .label-left {
     position: absolute;
     left: 6%;
+    bottom: 0;
     width: 100%;
     text-align: left;
 }
@@ -166,6 +170,7 @@ body {
 .label-right {
     position: absolute;
     right: 5%;
+    bottom: 0;
     width: 100%;
     text-align: right;
 }
@@ -173,6 +178,7 @@ body {
 .label-center {
     position: absolute;
     left: 0;
+    bottom: 0;
     width: 100%;
     text-align: center;
 }

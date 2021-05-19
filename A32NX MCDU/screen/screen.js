@@ -287,5 +287,7 @@ document.addEventListener('DOMContentLoaded', () => {
     mcdu.generateHTMLLayout(document.getElementById("screen"));
     setInterval(() => {
         document.body.style.width = window.innerWidth + "px";
+        document.documentElement.style.setProperty("--mcdu-font-size", (window.innerWidth * .053) + "px");
+        document.documentElement.style.setProperty("--mcdu-line-height", (window.innerWidth * .058) + "px");
     }, 200)
 }, false);
